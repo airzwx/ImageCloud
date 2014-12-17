@@ -7,12 +7,14 @@ class QiniuDriver
 	public $accessKey;
 	public $secretKey;
 	public $bucket;
+	public $cloudurl;
 
 	function __construct()
 	{
 		$this->accessKey = C('Plugins.ImageCloud.Qiniu.AccessKey');
 		$this->secretKey = C('Plugins.ImageCloud.Qiniu.SecretKey');
 		$this->bucket = C('Plugins.ImageCloud.Qiniu.Bucket');
+		$this->cloudurl = C('Plugins.ImageCloud.Qiniu.CloudURL');
 	}
 
 	public function getTokens()
@@ -37,7 +39,7 @@ class QiniuDriver
 
 	public function getRootUrl()
 	{
-		return C('Plugins.ImageCloud.Qiniu.RootUrl',"http://{$this->bucket}.qiniudn.com/");
+		return C('Plugins.ImageCloud.Qiniu.RootUrl',"http://{$this->cloudurl}/");
 	}
 
 	public function getSuffix()
