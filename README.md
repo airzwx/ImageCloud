@@ -3,7 +3,7 @@ ImageCloud
 
 [vanillaforums plugin] lightweight image uploader using Qiniu Cloud as storage
 
-To use this plugin, you need to edit your conf/config.php and add following items between two dividing lines:
+To use this plugin, you need to modify your conf/config.php and add following items between two dividing lines and edit it according to your own information:
 
 ======dividing line======
 
